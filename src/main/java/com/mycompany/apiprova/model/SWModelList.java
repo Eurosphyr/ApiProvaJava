@@ -16,5 +16,13 @@ public class SWModelList<T> implements Serializable {
     public boolean hasMore() {
         return (next != null && next.length() != 0);
     }
+    
+    public int getCount() {
+        return count;
+    }
+
+    public ArrayList<T> getResults() {
+        return results;
+    }
 
 }
