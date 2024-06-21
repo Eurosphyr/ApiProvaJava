@@ -32,6 +32,19 @@
                     <argLine>--add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</argLine>
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>
+                            ${exec.mainClass}
+                        </mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
     <dependencies>
